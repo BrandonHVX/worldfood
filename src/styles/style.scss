@@ -26,7 +26,8 @@ $headings-font-family: $font-family-sans-serif !default;
 $navbar-height: 72px;
 
 header.masthead {
-  padding-top: 10rem;
+  padding-top: 5rem;
+
   padding-bottom: calc(10rem - #{$navbar-height});
   // replace the masthead.jpg image in the /img directory to change the image
   // if the image name change, make sure to update the url path below!

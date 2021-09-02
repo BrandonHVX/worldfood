@@ -28,7 +28,7 @@ export default class End extends Component {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", ...this.state }),
     })
-      .then(() => alert("Success!"))
+      .then(() => navigate("/success/"))
       .catch(error => alert(error))
 
     e.preventDefault()
@@ -56,7 +56,9 @@ export default class End extends Component {
               <h1 className="text-center my-5">Vendor Registration</h1>
               <form
                 name="contact"
+                class="needs-validation"
                 method="post"
+                action="/success"
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
                 onSubmit={this.handleSubmit}
@@ -64,17 +66,21 @@ export default class End extends Component {
                 {/* You still need to add the hidden input with the form name to your JSX form */}
                 <input type="hidden" name="form-name" value="contact" />
                 <div className="row justify-content-md-center my-4">
-                  <div className="col-lg-6 mb-4">
-                    <input
-                      name="businessname"
-                      value={businessname}
-                      onChange={this.handleChange}
-                      type="name"
-                      className="inputBox is-invalid"
-                      id="validationServerUsername"
-                      placeholder="Business Name"
-                    />
-                    <div class="invalid-feedback">Please choose a Name</div>
+                  <div class="col-md-6 mb-3">
+                    <div class="input-group">
+                      <input
+                        id="validationTooltipUsername"
+                        name="businessname"
+                        value={businessname}
+                        onChange={this.handleChange}
+                        type="text"
+                        className="inputBox"
+                        placeholder="Name Of Business"
+                        aria-describedby="validationTooltipUsernamePrepend"
+                        required
+                      />
+                      <div class="invalid-tooltip">Name Required.</div>
+                    </div>
                   </div>
                   <div className="col-lg-6 mb-4">
                     <input
@@ -84,6 +90,8 @@ export default class End extends Component {
                       type="email"
                       className="inputBox"
                       placeholder="Business Owner's Name"
+                      required
+                      id="validationTooltipUsername"
                     />
                   </div>
                   <div className="col-lg-5 mb-4">
@@ -93,7 +101,8 @@ export default class End extends Component {
                       value={businessaddress}
                       onChange={this.handleChange}
                       className="inputBox"
-                      placeholder=" Address"
+                      placeholder="Address"
+                      required
                     />
                   </div>
                   <div className="col-lg-4 mb-4">
@@ -104,6 +113,7 @@ export default class End extends Component {
                       type="name"
                       className="inputBox"
                       placeholder=" City"
+                      required
                     />
                   </div>
                   <div className="col-lg-3 mb-4">
@@ -114,6 +124,7 @@ export default class End extends Component {
                       type="name"
                       className="inputBox"
                       placeholder=" State"
+                      required
                     />
                   </div>
                   <div className="col-lg-3 mb-4">
@@ -124,6 +135,7 @@ export default class End extends Component {
                       type="name"
                       className="inputBox"
                       placeholder=" Zip"
+                      required
                     />
                   </div>
                   <div className="col-lg-4 mb-4">
@@ -134,6 +146,7 @@ export default class End extends Component {
                       type="number"
                       className="inputBox"
                       placeholder="Telephone"
+                      required
                     />
                   </div>
                   <div className="col-lg-5 mb-4">
@@ -144,6 +157,7 @@ export default class End extends Component {
                       type="email"
                       className="inputBox"
                       placeholder="Email"
+                      required
                     />
                   </div>
                 </div>
