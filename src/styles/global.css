@@ -38,8 +38,8 @@ section {
   border: none;
   border-radius: 10px;
   padding: 20px;
-  text-decoration-color: white;
-  color: white;
+  text-decoration-color: rgb(45, 45, 45);
+  color: black;
 }
 
 textarea:focus {
