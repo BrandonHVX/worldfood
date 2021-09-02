@@ -35,7 +35,7 @@ function LandingPage() {
         <div className="container h-100">
           <div className="row h-100 align-items-center justify-content-center text-center">
             <div className="col-lg-10 align-self-end">
-              <img src={eventImage} height="600" />
+              <img src={eventImage} height="400" />
               <h1 className="text-uppercase text-white font-weight-bold">
                 Food Truck Extravaganza: Around The World in South-Dade.
               </h1>
