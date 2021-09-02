@@ -63,7 +63,7 @@ export default class End extends Component {
               >
                 {/* You still need to add the hidden input with the form name to your JSX form */}
                 <input type="hidden" name="form-name" value="contact" />
-                <div className="row my-4">
+                <div className="row justify-content-md-center my-4">
                   <div className="col-lg-6 mb-4">
                     <input
                       name="businessname"
