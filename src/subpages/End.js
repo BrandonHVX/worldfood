@@ -12,6 +12,7 @@ export default class End extends Component {
     this.state = {
       businessname: "",
       businessemail: "",
+      businessowner: "",
       businessphone: "",
       businessaddress: "",
       businesscity: "",
@@ -38,6 +39,7 @@ export default class End extends Component {
   render() {
     const {
       businessname,
+      businessowner,
       businessemail,
       businessaddress,
       businesscity,
@@ -84,10 +86,10 @@ export default class End extends Component {
                   </div>
                   <div className="col-lg-6 mb-4">
                     <input
-                      name="businessemail"
-                      value={businessemail}
+                      name="businessowner"
+                      value={businessowner}
                       onChange={this.handleChange}
-                      type="email"
+                      type="text"
                       className="inputBox"
                       placeholder="Business Owner's Name"
                       required
@@ -110,7 +112,7 @@ export default class End extends Component {
                       name="businesscity"
                       value={businesscity}
                       onChange={this.handleChange}
-                      type="name"
+                      type="text"
                       className="inputBox"
                       placeholder=" City"
                       required
@@ -121,7 +123,7 @@ export default class End extends Component {
                       name="businessstate"
                       value={businessstate}
                       onChange={this.handleChange}
-                      type="name"
+                      type="text"
                       className="inputBox"
                       placeholder=" State"
                       required
@@ -132,7 +134,7 @@ export default class End extends Component {
                       name="businesszip"
                       value={businesszip}
                       onChange={this.handleChange}
-                      type="name"
+                      type="text"
                       className="inputBox"
                       placeholder=" Zip"
                       required
