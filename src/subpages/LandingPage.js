@@ -16,14 +16,13 @@ function LandingPage() {
   const { welcomeText, landingText } = pageDataYaml
 
   const pageStyle = {
-    backgroundImage:
-      "url(https://images.pexels.com/photos/113338/pexels-photo-113338.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
     color: "white",
     backgroundColor: "rgba(0, 0, 0, 0.6)",
     backgroundBlendMode: "multiply",
+    backgroundAttachment: "scroll",
   }
 
   const welcomeStyle = {
@@ -31,7 +30,7 @@ function LandingPage() {
   }
 
   return (
-    <section id="home" style={pageStyle} className="container-fluid">
+    <section id="home" className="container-fluid  page-style">
       <div className="container ">
         <Navbar />
       </div>
