@@ -1,5 +1,5 @@
 import React from "react"
-import AnchorLink from 'react-anchor-link-smooth-scroll'
+import AnchorLink from "react-anchor-link-smooth-scroll"
 
 function Navbar() {
   const textStyle = {
@@ -31,7 +31,7 @@ function Navbar() {
         </div>
       </div>
       <nav className="navbar navbar-dark">
-        <h4 style={textStyle}>KRISP</h4>
+        <h4 style={textStyle}>Around the World</h4>
         <button
           className="navbar-toggler"
           type="button"

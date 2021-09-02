@@ -11,7 +11,7 @@ body {
 }
 
 section {
-  height: 100vh;
+  height: 50vh;
   width: 100%;
 }
 
@@ -19,34 +19,33 @@ section {
   height: 100%;
   display: flex;
   justify-content: center;
-  flex-direction: column
+  flex-direction: column;
 }
 
-.centerItems{
-  height: 80vh;
+.centerItems {
   display: flex;
+  height: 500px;
   justify-content: center;
-  flex-direction: column
 }
 
-.inputBox{
+.inputBox {
   width: 100%;
-  background-color: #673AB7;
+  background-color: #ffffff;
   border: none;
   border-radius: 10px;
   padding: 20px;
   text-decoration-color: white;
-  color: white
+  color: white;
 }
 
-textarea:focus{
-  animation: none !important
+textarea:focus {
+  animation: none !important;
 }
 
-footer{
-  color: #B9A4DE
+footer {
+  color: #b9a4de;
 }
 
 footer a {
-  color: white
+  color: white;
 }
