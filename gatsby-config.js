@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Gatsby Starter Krisp`,
     description: `A Clean, Minimal and Responsive Site`,
-    author: `@mohanmonu777`,
+    author: `brandon`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
