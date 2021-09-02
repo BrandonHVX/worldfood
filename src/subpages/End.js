@@ -146,7 +146,7 @@ export default class End extends Component {
                   </div>
                 </div>
 
-                <button className="btn btn-light mb-4 py-3" type="submit">
+                <button className="btn btn-light mb-4 " type="submit">
                   Send
                 </button>
               </form>

@@ -1,5 +1,6 @@
 import React from "react"
-import "../global.css"
+import "../styles/global.css"
+import "../styles/style.scss"
 import LandingPage from "../subpages/LandingPage"
 import Services from "../subpages/Services"
 import Team from "../subpages/Team"

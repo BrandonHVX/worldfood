@@ -1,0 +1,46 @@
+// Variables
+
+// Color overrides
+
+// Set a custom color
+$orange: #f4623a !default;
+$brown: #035376 !default;
+
+// Set primary color to orange
+$primary: $orange !default;
+
+// Font overrides
+$font-family-sans-serif: "Merriweather Sans", -apple-system, BlinkMacSystemFont,
+  "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+
+$font-family-serif: "Merriweather", -apple-system, BlinkMacSystemFont,
+  "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+
+$font-family-base: $font-family-serif !default;
+
+$headings-font-family: $font-family-sans-serif !default;
+
+// Custom variables
+$navbar-height: 72px;
+
+header.masthead {
+  padding-top: 10rem;
+  padding-bottom: calc(10rem - #{$navbar-height});
+  // replace the masthead.jpg image in the /img directory to change the image
+  // if the image name change, make sure to update the url path below!
+  background: linear-gradient(
+      to bottom,
+      #{fade-out($brown, 0.1)} 0%,
+      #{fade-out($brown, 0.1)} 100%
+    ),
+    url("../images/foodtruck.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  h1 {
+    font-size: 2.25rem;
+  }
+}
