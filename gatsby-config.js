@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Krisp`,
-    description: `A Clean, Minimal and Responsive Site`,
+    title: `FOOD TRUCK EXTRAVAGANZA: AROUND THE WORLD IN SOUTH-DADE`,
+    description: `FOOD TRUCK EXTRAVAGANZA`,
     author: `brandon`,
   },
   plugins: [
