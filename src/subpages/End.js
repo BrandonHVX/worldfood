@@ -28,7 +28,7 @@ export default class End extends Component {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", ...this.state }),
     })
-      .then(() => navigate("/success/"))
+      .then(() => alert("Success!"))
       .catch(error => alert(error))
 
     e.preventDefault()
