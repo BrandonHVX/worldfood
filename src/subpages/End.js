@@ -70,9 +70,11 @@ export default class End extends Component {
                       value={businessname}
                       onChange={this.handleChange}
                       type="name"
-                      className="inputBox"
+                      className="inputBox is-invalid"
+                      id="validationServerUsername"
                       placeholder="Business Name"
                     />
+                    <div class="invalid-feedback">Please choose a Name</div>
                   </div>
                   <div className="col-lg-6 mb-4">
                     <input
