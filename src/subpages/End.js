@@ -9,7 +9,15 @@ const encode = data => {
 export default class End extends Component {
   constructor(props) {
     super(props)
-    this.state = { name: "", email: "", message: "" }
+    this.state = {
+      businessname: "",
+      businessemail: "",
+      businessphone: "",
+      businessaddress: "",
+      businesscity: "",
+      businessstate: "",
+      businesszip: "",
+    }
   }
 
   /* Here’s the juicy bit for posting the form submission */
@@ -28,7 +36,15 @@ export default class End extends Component {
 
   handleChange = e => this.setState({ [e.target.name]: e.target.value })
   render() {
-    const { name, email, message } = this.state
+    const {
+      businessname,
+      businessemail,
+      businessaddress,
+      businesscity,
+      businessstate,
+      businesphone,
+      businesszip,
+    } = this.state
     return (
       <div>
         <form
@@ -40,38 +56,89 @@ export default class End extends Component {
         >
           {/* You still need to add the hidden input with the form name to your JSX form */}
           <input type="hidden" name="form-name" value="contact" />
-          <p>
-            <label>
-              Your Name:{" "}
+          <div className="row my-4">
+            <div className="col-lg-6 mb-4">
               <input
-                type="text"
-                name="name"
-                value={name}
+                name="businessname"
+                value={businessname}
                 onChange={this.handleChange}
+                type="name"
+                className="inputBox"
+                placeholder="Business Name"
               />
-            </label>
-          </p>
-          <p>
-            <label>
-              Your Email:{" "}
+            </div>
+            <div className="col-lg-6 mb-4">
               <input
+                name="businessemail"
+                value={businessemail}
+                onChange={this.handleChange}
                 type="email"
-                name="email"
-                value={email}
-                onChange={this.handleChange}
+                className="inputBox"
+                placeholder="Business Owner's Name"
               />
-            </label>
-          </p>
-          <p>
-            <label>
-              Message:{" "}
-              <textarea
-                name="message"
-                value={message}
+            </div>
+            <div className="col-lg-5 mb-4">
+              <input
+                type="name"
+                name="businessaddress"
+                value={businessaddress}
                 onChange={this.handleChange}
+                className="inputBox"
+                placeholder=" Address"
               />
-            </label>
-          </p>
+            </div>
+            <div className="col-lg-4 mb-4">
+              <input
+                name="businesscity"
+                value={businesscity}
+                onChange={this.handleChange}
+                type="name"
+                className="inputBox"
+                placeholder=" City"
+              />
+            </div>
+            <div className="col-lg-3 mb-4">
+              <input
+                name="businessstate"
+                value={businessstate}
+                onChange={this.handleChange}
+                type="name"
+                className="inputBox"
+                placeholder=" State"
+              />
+            </div>
+            <div className="col-lg-3 mb-4">
+              <input
+                name="businesszip"
+                value={businesszip}
+                onChange={this.handleChange}
+                type="name"
+                className="inputBox"
+                placeholder=" State"
+              />
+            </div>
+            <div className="col-lg-4 mb-4">
+              <input
+                name="businessphone"
+                value={businesphone}
+                onChange={this.handleChange}
+                type="email"
+                className="inputBox"
+                placeholder="Telephone"
+              />
+            </div>
+            <div className="col-lg-8 mb-4">
+              <input
+                name="businessemail"
+                value={businessemail}
+                onChange={this.handleChange}
+                type="email"
+                className="inputBox"
+                placeholder="Email"
+              />
+            </div>
+          </div>
+
           <p>
             <button type="submit">Send</button>
           </p>
