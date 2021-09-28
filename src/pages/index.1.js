@@ -5,7 +5,6 @@ import Team from "../subpages/Team"
 import End from "../subpages/End"
 import Footer from "../components/Footer"
 import React, { Component } from "react"
-import Pic from "../images/form-v8.jpg"
 
 const encode = data => {
   return Object.keys(data)
@@ -52,28 +51,13 @@ export default class index extends Component {
       businesszip,
     } = this.state
     return (
-      <div class="page-content">
-        <div class="form-v8-content">
-          <div class="form-left">
-            <img src={Pic} alt="form" />
-          </div>
-          <div class="form-right">
-            <div class="tab">
-              <div class="tab-inner">
-                <button
-                  class="tablinks"
-                  onclick="openCity(event, 'sign-up')"
-                  id="defaultOpen"
-                >
-                  Sign Up
-                </button>
-              </div>
-            </div>
+      <div class="main">
+        <section>
+          <div class="signup-content">
             <form
-              class="form-detail"
               method="POST"
               id="signup-form"
-              // class="signup-form"
+              class="signup-form"
               name="tailgate"
               class="needs-validation"
               method="post"
@@ -82,10 +66,17 @@ export default class index extends Component {
               data-netlify-honeypot="bot-field"
               onSubmit={this.handleSubmit}
             >
-              <div class="col-md-6">
-                <label for="inputEmail4" class="form-label">
-                  Email
+              <input type="hidden" name="form-name" value="tailgate" />
+              <h2 class="form-title">Vender Registration</h2>
+              <div class="form-group">
+                <label for="agree-term" class="label-agree-term">
+                  I agree all statements in{" "}
+                  <a href="#" class="term-service">
+                    Terms of service
+                  </a>
                 </label>
+              </div>
+              <div class="form-group">
                 <input
                   class="form-input"
                   id="validationTooltipUsername"
@@ -98,10 +89,7 @@ export default class index extends Component {
                   required
                 />
               </div>
-              <div class="col-md-6">
-                <label for="inputEmail4" class="form-label">
-                  Email
-                </label>
+              <div class="form-group">
                 <input
                   class="form-input"
                   name="businessowner"
@@ -113,10 +101,7 @@ export default class index extends Component {
                   id="validationTooltipUsername"
                 />
               </div>
-              <div class="col-12">
-                <label for="inputEmail4" class="form-label">
-                  Email
-                </label>
+              <div class="form-group">
                 <input
                   name="businessphone"
                   value={businesphone}
@@ -127,10 +112,7 @@ export default class index extends Component {
                   required
                 />
               </div>
-              <div class="col-12">
-                <label for="inputEmail4" class="form-label">
-                  Email
-                </label>
+              <div class="form-group">
                 <input
                   name="businessemail"
                   value={businessemail}
@@ -141,10 +123,7 @@ export default class index extends Component {
                   required
                 />
               </div>
-              <div class="col-md-12">
-                <label for="inputEmail4" class="form-label">
-                  Email
-                </label>
+              <div class="form-group">
                 <input
                   class="form-input"
                   type="name"
@@ -155,27 +134,7 @@ export default class index extends Component {
                   required
                 />
               </div>
-              <div class="col-md-4">
-                <label for="inputEmail4" class="form-label">
-                  Email
-                </label>
-                <select
-                  name="businessstate"
-                  value={businessstate}
-                  onChange={this.handleChange}
-                  type="text"
-                  class="form-input"
-                  placeholder=" State"
-                  requiredid="inputState"
-                >
-                  <option selected>State...</option>
-                  <option>Florida</option>
-                </select>
-              </div>
-              <div class="col-md-4">
-                <label for="inputEmail4" class="form-label">
-                  Email
-                </label>
+              <div class="form-group">
                 <input
                   class="form-input"
                   name="businesscity"
@@ -186,40 +145,48 @@ export default class index extends Component {
                   required
                 />
               </div>
-              <div class="col-md-4">
-                <label for="inputEmail4" class="form-label">
-                  Email
-                </label>
+              <div class="form-group">
                 <input
+                  name="businessstate"
+                  value={businessstate}
+                  onChange={this.handleChange}
+                  type="text"
                   class="form-input"
+                  placeholder=" State"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <input
                   name="businesszip"
                   value={businesszip}
                   onChange={this.handleChange}
                   type="text"
-                  placeholder="Zip"
+                  class="form-input"
+                  placeholder=" Zip"
                   required
                 />
               </div>
-              <div class="col-12">
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="checkbox"
-                    id="gridCheck"
-                  />
-                  <label class="form-check-label" for="gridCheck">
-                    Check me out
-                  </label>
-                </div>
-              </div>
-              <div class="col-12">
-                <button type="submit" class="btn btn-primary">
-                  Sign in
-                </button>
+
+              <div class="form-group">
+                <input
+                  type="submit"
+                  name="submit"
+                  id="submit"
+                  class="form-submit"
+                  value="Sign up"
+                />
               </div>
             </form>
+            <p class="loginhere">
+              Have already an account ?{" "}
+              <a href="#" class="loginhere-link">
+                Login here
+              </a>
+            </p>
           </div>
-        </div>
+        </section>
       </div>
     )
   }
