@@ -106,6 +106,7 @@ export default class index extends Component {
                     onChange={this.handleChange}
                     type="text"
                     placeholder="Business Owner's Name"
+                    aria-describedby="validationTooltipUsernamePrepend"
                     required
                     id="validationTooltipUsername"
                   />
@@ -179,6 +180,7 @@ export default class index extends Component {
                     class="form-input"
                     placeholder=" State"
                     requiredid="inputState"
+                    required
                   >
                     <option selected>State...</option>
                     <option>Florida</option>
