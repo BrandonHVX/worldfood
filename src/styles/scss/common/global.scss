@@ -50,7 +50,7 @@ body {
   -ms-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
   -moz-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
   -webkit-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
-  margin: 177px 0;
+  margin: 100px 0;
   font-family: "Source Sans Pro", sans-serif;
   color: #fff;
   position: relative;
@@ -61,11 +61,12 @@ body {
   margin-bottom: -4px;
 }
 .form-v8-content .form-left img {
+  width: 100%;
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
 }
 .form-v8-content .form-right {
-  padding: 30px 0;
+  padding: 10px;
   position: relative;
   width: 100%;
   background: #3d5983;
@@ -73,7 +74,6 @@ body {
   border-bottom-right-radius: 8px;
 }
 .form-v8-content .tab {
-  margin: 5px 0 48px;
   width: 100%;
   display: flex;
   display: -webkit-flex;
@@ -98,7 +98,7 @@ body {
   font-size: 28px;
   font-weight: 400;
   color: #ccc;
-  padding-bottom: 22px;
+  padding-bottom: 12px;
   border-bottom: 3px solid;
   border-bottom-color: rgba(255, 255, 255, 0.2);
   width: 100%;
@@ -109,7 +109,7 @@ body {
   border-bottom-color: #30e1df;
 }
 .form-v8-content .form-detail {
-  padding: 0 40px;
+  padding: 0 10px;
 }
 .form-v8-content .form-row {
   width: 100%;
@@ -117,14 +117,16 @@ body {
 }
 .form-v8-content .form-row .form-row-inner {
   position: relative;
+  text-align: left;
   width: 100%;
 }
 .form-v8-content .form-row .form-row-inner .label {
   position: absolute;
   top: -2px;
   left: 10px;
-  font-size: 18px;
+  font-size: 8px;
   color: #f2f2f2;
+  text-align: left;
   font-weight: 400;
   transform-origin: 0 0;
   transition: all 0.2s ease;
@@ -133,9 +135,15 @@ body {
   -o-transition: all 0.2s ease;
   -ms-transition: all 0.2s ease;
 }
+
+.form-label {
+  font-size: 10px;
+  text-align: left;
+  padding-top: 10px;
+}
 .form-v8-content .form-row .form-row-inner .border {
   position: absolute;
-  bottom: 31px;
+  bottom: 11px;
   left: 0;
   height: 1px;
   width: 100%;
@@ -153,11 +161,13 @@ body {
   -ms-transition: all 0.15s ease;
 }
 .form-v8-content .form-detail .input-text {
-  margin-bottom: 31px;
+  margin-bottom: 21px;
+  text-align: left;
 }
 .form-v8-content .form-detail input {
   width: 100%;
   padding: 0px 10px 15px 10px;
+  text-align: left;
   border: 1px solid transparent;
   border-bottom: 1px solid;
   border-bottom-color: rgba(255, 255, 255, 0.2);
