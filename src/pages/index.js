@@ -5,7 +5,7 @@ import Team from "../subpages/Team"
 import End from "../subpages/End"
 import Footer from "../components/Footer"
 import React, { Component } from "react"
-import Pic from "../images/tailgate.png"
+import Pic from "../images/new.png"
 
 const encode = data => {
   return Object.keys(data)
